@@ -6,13 +6,13 @@ class Router extends Component {
     super(props);
   }
   render() {
-  	const arraySize =[1000,2000,3000];
+  	const arraySize =[10,20,50,100,500,1000,2000,3000];
   	const algos =["bubble","selection","insertion","quick","merge"];
   	const keys =["Name","Age"];//,"DOB"];
   	const types =["str","num","date"];
   	let res =[];
   	let index = 0;
-  	for (var i = 0; i < arraySize.length; i++) {
+  	for (var i = 0; i <2 /*arraySize.length*/; i++) {
   		let array = people.slice(0, arraySize[i]);
   		for (var j = 0; j < algos.length; j++) {
   			let algo= algos[j];
@@ -40,6 +40,7 @@ class Router extends Component {
 			    	elapsedTime:(new Date().getTime()-startTime),
 			    };
 			    console.log(index);
+			    res = [...res,result]
   		}
   		
   	}
